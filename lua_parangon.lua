@@ -19,7 +19,7 @@
 
   This script allo player to up fake level like Parangon (Diablo 3) and allow to up statistiques.
 
-  @iThorgrim_Github : https://github.com/Thanatos-Hub
+  @iThorgrim_Github : https://github.com/Open-Wow
   @iThorgrim_Facebook : facebook.com/iThorgrim
   @iThorgrim_Site : https://open-wow.fr
 
