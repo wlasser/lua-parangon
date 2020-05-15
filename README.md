@@ -4,10 +4,10 @@
 
 ### Description
 
-		I share my Parangon System.
+	I share my Parangon System.
 
-		Parangon is a script that allows you to set up Diablo 3's Parangon system.
-		This one is provided without interface, you can place your statistics from the .parangon command.
+	Parangon is a script that allows you to set up Diablo 3's Parangon system.
+	This one is provided without interface, you can place your statistics from the .parangon command.
 
   	You will be able to earn Parangon points all Levels, experience points can be earned via PvE & PvP.
 
