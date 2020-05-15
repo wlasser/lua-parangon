@@ -7,11 +7,11 @@
 	I share my Parangon System.
   
 	Parangon is a script that allows you to set up Diablo 3's Parangon system.
-  This one is provided without interface, you can place your statistics from the .parangon command.
+	This one is provided without interface, you can place your statistics from the .parangon command.
 
-  You will be able to earn Parangon points all Levels, experience points can be earned via PvE & PvP.
+  	You will be able to earn Parangon points all Levels, experience points can be earned via PvE & PvP.
 
-  To change the parameters you just have to open the script.
+  	To change the parameters you just have to open the script.
 
     Repository: https://github.com/Thanatos-Hub/lua-parangon
     Download: https://github.com/Thanatos-Hub/lua-parangon/releases
