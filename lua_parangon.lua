@@ -15,12 +15,13 @@
                                                    $$$$$$/  Without AIO
 
 
-  @Original_Author : Open-Wow
+  @Original_Author : iThorgrim
 
   This script allo player to up fake level like Parangon (Diablo 3) and allow to up statistiques.
 
-  @Open-Wow Github : https://github.com/Open-Wow
-  @Open-Wow Site : https://open-wow.fr
+  @iThorgrim_Github : https://github.com/Open-Wow
+  @iThorgrim_Facebook : facebook.com/iThorgrim
+  @iThorgrim_Site : https://open-wow.fr
 
   @AzerothCore Community : https://discord.gg/PaqQRkd
   @Open-Wow Community : https://discord.gg/mTHxKmY
@@ -28,7 +29,6 @@
   Thanks for your patience <3.
 
 ]]--
-
 local Parangon = {};
 
 Parangon.Config = {
