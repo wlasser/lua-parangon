@@ -14,13 +14,13 @@
   	To change the parameters you just have to open the script.
 
     Repository: https://github.com/Open-Wow/lua-parangon
-    Download: https://github.com/Open-Wow/lua-parangon/releases
+    Download: https://github.com/Open-Wow/lua-parangon/archive/master.zip
     License: AGPL
 
 
 # Usage
 
-- Download the [release](https://github.com/Open-Wow/lua-parangon/releases).
+- Download the [release](https://github.com/Open-Wow/lua-parangon/archive/master.zip).
 - Just **drop the lua-parangon.lua on your *lua_scripts* folder.**
 - Configure the script. **(Open with notepad & go to line 34)**.
 - Reload Eluna (.reload eluna).
@@ -33,6 +33,6 @@ If you encounter a bug please [open a issue](https://github.com/Open-Wow/lua-par
 
 ## Credits
 
-* [iThorgrim-hub](https://github.com/Open-Wow)
+* [Open-Wow](https://github.com/Open-Wow)
 
 AzerothCore: [repository](https://github.com/azerothcore) - [website](http://azerothcore.org/) - [discord chat community](https://discord.gg/PaqQRkd)
