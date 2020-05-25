@@ -91,22 +91,42 @@ Parangon.Infos = {};
       --
       local getParangonStats = CharDBQuery("SELECT strenght, agility, stamina, intellect FROM `"..Parangon.Config.dbName.."`.characters_parangon WHERE guid = "..pGuid.." AND accountid = "..pAccid..";");
       --
-      Parangon.Stats[pGuid] = {
-        [7464] = getParangonStats:GetUInt32(0), -- Strenght
-        [7471] = getParangonStats:GetUInt32(1), -- Agility
-        [7477] = getParangonStats:GetUInt32(2), -- Stamina
-        [7468] = getParangonStats:GetUInt32(3); -- Intellect
-      };
+
+      if (not (getParangonStats)) then
+        local setParangonStats = CharDBExecute("INSERT INTO `"..Parangon.Config.dbName.."`.characters_parangon (accountid, guid) VALUES ("..pAccid..", "..pGuid..");");
+        Parangon.Stats[pGuid] = {
+          [7464] = 0,
+          [7471] = 0,
+          [7477] = 0,
+          [7468] = 0;
+        };
+      else
+        Parangon.Stats[pGuid] = {
+          [7464] = getParangonStats:GetUInt32(0), -- Strenght
+          [7471] = getParangonStats:GetUInt32(1), -- Agility
+          [7477] = getParangonStats:GetUInt32(2), -- Stamina
+          [7468] = getParangonStats:GetUInt32(3); -- Intellect
+        };
+      end
     end
 
     if (not (Parangon.Infos[pAccid])) then
       --
       local getParangonInfo = CharDBQuery("SELECT level, exp FROM `"..Parangon.Config.dbName.."`.account_parangon WHERE accountid = "..pAccid..";");
       --
-      Parangon.Infos[pAccid] = {
-        level = getParangonInfo:GetUInt32(0),
-        exp = getParangonInfo:GetUInt32(1);
-      };
+
+      if (not (getParangonInfo)) then
+        local setParangonInfo = CharDBExecute("INSERT INTO `"..Parangon.Config.dbName.."`.account_parangon (accountid) VALUES ("..pAccid..");");
+        Parangon.Infos[pAccid] = {
+          level = 1,
+          exp = 0;
+        };
+      else
+        Parangon.Infos[pAccid] = {
+          level = getParangonInfo:GetUInt32(0),
+          exp = getParangonInfo:GetUInt32(1);
+        };
+      end
     end
     Parangon.Infos[pAccid].points = ((Parangon.Infos[pAccid].level * Parangon.Config.pointsPerLevel) - Parangon.Stats[pGuid][7464] - Parangon.Stats[pGuid][7471] - Parangon.Stats[pGuid][7477] - Parangon.Stats[pGuid][7468]);
     Parangon.setStats(player);
