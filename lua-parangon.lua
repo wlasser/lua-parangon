@@ -44,7 +44,7 @@ Parangon.Config = {
   pointsPerLevel = 2,
 
   -- Minimum level for Parangon
-  minLevel = 70,
+  minLevel = 1,
 
   -- DB Name .. so easy
   dbName = 'ac_eluna',
@@ -221,6 +221,7 @@ Parangon.Infos = {};
   function Parangon.onKillCreature(event, player, creature)
     local pLevel = player:GetLevel();
     local cLevel = creature:GetLevel();
+    local pAccid = player:GetAccountId();
 
     if ((pLevel >= Parangon.Config.minLevel) and (player:IsInGroup() == true)) then
       local group = player:GetGroup();
@@ -237,7 +238,7 @@ Parangon.Infos = {};
     elseif ((pLevel >= Parangon.Config.minLevel) and (player:IsInGroup() == false)) then
       if ((pLevel - cLevel) or ((cLevel - pLevel) == 10))then
 
-        Parangon.Infos[pAccid].exp = Parangon.Infos[pAccid].exp + ParangonConfig.pveKill;
+        Parangon.Infos[pAccid].exp = Parangon.Infos[pAccid].exp + Parangon.Config.pveKill;
         Parangon.setParangonLevelUp(event, player);
       end
     end
@@ -248,6 +249,7 @@ Parangon.Infos = {};
   function Parangon.onKillPlayer(event, player, victim)
     local pLevel = player:GetLevel();
     local vLevel = victim:GetLevel();
+    local pAccid = player:GetAccountId();
 
     if ((pLevel >= Parangon.Config.minLevel) and (player:IsInGroup() == true)) then
       local group = player:GetGroup();
