@@ -137,12 +137,14 @@ function Parangon.getParangon(event, player)
             )
             Parangon.Infos[pAccid] = {
                 level = 1,
-                exp = 0
+                exp = 0,
+                points = 0
             }
         else
             Parangon.Infos[pAccid] = {
                 level = getParangonInfo:GetUInt32(0),
-                exp = getParangonInfo:GetUInt32(1)
+                exp = getParangonInfo:GetUInt32(1),
+                points = 0
             }
         end
     end
